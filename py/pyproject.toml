@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cron-runs"
+version = "1.0.0"
+description = "Get next and previous runs for a standard 5-field cron expression as normalized timestamps."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+  { name = "Troy Tessalone" }
+]
+keywords = ["cron", "timestamps", "timezone", "schedule", "occurrences", "unix", "iso"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+  "croniter>=3.0.3",
+  "cron-descriptor>=1.4.5"
+]
+
+[project.urls]
+Homepage = "https://github.com/troytessalone/cron-runs"
+Repository = "https://github.com/troytessalone/cron-runs"
+Issues = "https://github.com/troytessalone/cron-runs/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cron_runs"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

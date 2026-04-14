@@ -1,0 +1,47 @@
+{
+  "name": "cron-runs",
+  "version": "1.0.0",
+  "description": "Get next and previous runs for a standard 5-field cron expression as normalized timestamps.",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    }
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "cron",
+    "timestamps",
+    "timezone",
+    "schedule",
+    "occurrences",
+    "unix",
+    "iso"
+  ],
+  "author": "Troy Tessalone",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/troytessalone/cron-runs.git"
+  },
+  "homepage": "https://github.com/troytessalone/cron-runs#readme",
+  "bugs": {
+    "url": "https://github.com/troytessalone/cron-runs/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cron-parser": "^5.4.0",
+    "cronstrue": "^2.61.0",
+    "luxon": "^3.6.1"
+  }
+}
